@@ -1,0 +1,327 @@
+/* Fonts */
+@font-face {
+  src: url("../media/fonts/Karla/static/Karla-ExtraBold.ttf");
+  font-family: karla;
+}
+
+@font-face {
+  src: url("../media/fonts/Inter/static/Inter_18pt-Medium.ttf");
+  font-family: Inter-medium;
+}
+
+@font-face {
+  src: url("../media/fonts/Inter/static/Inter_18pt-Light.ttf");
+  font-family: Inter;
+}
+
+/* Color variavles */
+:root {
+  --body-bg: #1C1C1C;
+  /* Dark mode            */
+  /* bright mode */
+  --white: #ffffff;
+  /* H1 / button txt      */
+  /* button txt*/
+  --dm-h1-color-2: #FFFFFF;
+  /* H1 / button txt      */
+  /* button txt*/
+  --dm-dcrp-color: #D5D4D8;
+  /* Description txt      */
+  /* margin-top*/
+  --dm-btn-bg: #10B981;
+  /* button bg            */
+  /* H1 button bg*/
+  --dm-output-bg: #273549;
+  /* pass bg              */
+  /* pass bg  */
+
+  /* Dark mode */
+  --dm-bg: #1F2937;
+  /* container background */
+  --dm-h1-color-1: #4ADF86;
+  /* H1                   */
+  --dm-tmargin: #2F3E53;
+  /* margin-top           */
+  --dm-output-txt: #55F991;
+  /* pass txt             */
+
+  /* bright mode */
+  --nm-bg: #ECFDF5;
+  /* container background */
+  --nm-h1-color-1: #2B283A;
+  /* H1*/
+  --nm-dcrp-color: #6B7280;
+  /* Description txt*/
+  --nm-output-txt: #5DEF92;
+  /* pass txt*/
+}
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid red; */
+}
+
+
+main {
+  margin: 0px auto;
+  background-color: var(--body-bg);
+  width: 612px;
+  height: 614px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 550px;
+  height: 550px;
+  padding-left: 52px;
+  background-color: var(--dm-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+h1 {
+  color: var(--white);
+  font-family: karla;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -2.5%;
+}
+
+span {
+  color: var(--dm-h1-color-1)
+}
+
+h4 {
+  height: 28px;
+  font-family: Inter;
+  font-size: 20px;
+  color: var(--dm-dcrp-color);
+  margin-top: 10px;
+  letter-spacing: .8px;
+}
+
+
+#generate-btn {
+  width: 191px;
+  height: 42px;
+  background-color: var(--dm-btn-bg);
+  color: var(--white);
+  font-family: Inter-medium;
+  font-size: 16px;
+  padding: 9px 17px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 35px;
+}
+
+
+
+.border-top {
+  width: 446px;
+  border-top: 1px solid var(--dm-tmargin);
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#output-one-el,
+#output-two-el {
+  width: 211px;
+  height: 39px;
+  background-color: var(--dm-output-bg);
+  color: var(--dm-output-txt);
+  font-size: 16px;
+  line-height: 32px;
+  font-family: Inter-medium;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+}
+
+
+/* Extras */
+
+.settings {
+  width: 446px;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-family: Inter-medium;
+  font-size: 20px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+
+.checklist {
+  height: 164px;
+  display: flex;
+  align-items: center;
+}
+
+/* range container */
+.set-extras {
+  width: 211px;
+}
+
+#length-value {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 32px;
+  font-family: Inter-medium;
+  text-align: center;
+}
+
+#length-value span {
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--dm-output-txt);
+}
+
+/* CHECK BOX */
+li {
+  list-style: none;
+  margin: 5px;
+  padding-left: 6px;
+}
+
+label {
+  margin: 3px 0;
+  color: var(--white);
+  font-family: Inter;
+  font-size: 16px;
+  font-family: Inter-medium;
+}
+
+li input {
+  accent-color: var(--dm-output-txt);
+  margin: 6px 0;
+}
+
+
+
+/* Input Type Range */
+
+#set-length-el[type=range] {
+  height: 34px;
+  -webkit-appearance: none;
+  margin: 16px 0 5px 0;
+  width: 100%;
+  background: var(--dm-bg);
+}
+
+#set-length-el[type=range]:focus {
+  outline: none;
+}
+
+
+#set-length-el[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px var(--dm-output-bg);
+  background: var(--dm-h1-color-1);
+  border-radius: 5px;
+  border: 1px solid var(--dm-btn-bg);
+}
+
+#set-length-el[type=range]::-webkit-slider-thumb {
+  box-shadow: 0 0 5px var(--dm-output-txt);
+  border: 3px solid var(--dm-dcrp-color);
+  height: 25px;
+  width: 25px;
+  border-radius: 23px;
+  background: var(--nm-output-txt);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+#set-length-el[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--dm-h1-color-1);
+}
+
+#set-length-el[type=range]::-moz-range-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px var(--dm-output-bg);
+  background: var(--dm-h1-color-1);
+  border-radius: 1px;
+  border: 1px solid var(--dm-btn-bg);
+}
+
+#set-length-el[type=range]::-moz-range-thumb {
+  box-shadow: 3px 3px 3px var(--dm-output-txt);
+  border: 2px solid var(--dm-dcrp-color);
+  height: 23px;
+  width: 23px;
+  border-radius: 23px;
+  background: var(--nm-output-txt);
+  cursor: pointer;
+}
+
+#set-length-el[type=range]::-ms-track {
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+#set-length-el[type=range]::-ms-fill-lower {
+  background: var(--dm-h1-color-1);
+  border: 1px solid var(--dm-btn-bg);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px var(--dm-output-bg);
+}
+
+#set-length-el[type=range]::-ms-fill-upper {
+  background: var(--dm-h1-color-1);
+  border: 1px solid var(--dm-btn-bg);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px var(--dm-output-bg);
+}
+
+#set-length-el[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 3px 3px 3px var(--dm-output-txt);
+  border: 2px solid var(--dm-dcrp-color);
+  height: 23px;
+  width: 23px;
+  border-radius: 23px;
+  background: var(--nm-output-txt);
+  cursor: pointer;
+}
+
+#set-length-el[type=range]:focus::-ms-fill-lower {
+  background: var(--dm-h1-color-1);
+}
+
+#set-length-el[type=range]:focus::-ms-fill-upper {
+  background: var(--dm-h1-color-1);
+}
+
+
+.please-check{
+  border: 1px solid red;
+}

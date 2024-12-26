@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta date -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./resourses/styles/index.css">
+  <!-- TITLE -->
+  <title>Document</title>
+</head>
+<body>
+  
+  <main>
+    <div class="container">
+
+      <!-- Title -->
+      <div class="header">
+        <h1>
+          Generate a 
+          <br>
+          <span>random password</span>
+        </h1>
+        <!-- Sub-title -->
+        <h4>Never use an insecure password again.</h4>
+      </div>
+      
+      
+      <div class="settings">
+         <!-- Set the pass length -->
+        <div class="set-extras">
+          <input type="range" id="set-length-el" value="16" min="8" max="40">
+          <p id="length-value">Length: </p>
+          <!-- Button -->
+          <button id="generate-btn">Generate passwords</button>
+        </div>
+
+        <!-- Checkbox -->
+          <div class="checklist">
+           
+            <ul>
+              <p>Types of characters:</p>
+              <li>
+                <input type="checkbox" name="" id="letter-char">
+                <label for="letters-char">Letters (ex., Aa)</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="number-char">
+                <label for="number-char">Number (ex., 1462)</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="symbols-char">
+                <label for="symbols-char">Symbols (ex., !@#$%)</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      
+
+      <!-- Password output -->
+      <div class="border-top">
+        <input type="text"  id="output-one-el" title="Click to copy">
+        <input type="text"  id="output-two-el" title="Click to copy">
+      </div>
+    
+     
+     
+    </div>
+  </main>
+
+
+  <!-- script -->
+  <script src="./resourses/scripts/index.js"></script>
+</body>
+</html>
